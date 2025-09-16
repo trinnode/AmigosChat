@@ -1,18 +1,22 @@
 // Contract addresses for different networks
 export const CONTRACT_ADDRESSES = {
-  // Sepolia testnet - Your deployed BoomerChatRegistry contract
-  11155111: '0x6767Dd3830A88DED122c5dA4d05D052227097886', // Deployed BoomerChatRegistry on Sepolia
+  // Ethereum Sepolia testnet (commented but preserved)
+  // 11155111: '0x6767Dd3830A88DED122c5dA4d05D052227097886', // Original Sepolia deployment
+  
+  // Lisk Sepolia testnet - Active deployment
+  4202: '0x6C74B43b04C17322c5DfCE754b1d321EF7DF1a2c', // Deployed BoomerChatRegistry on Lisk Sepolia
+  
   // Mainnet (when ready)
   1: '0x0000000000000000000000000000000000000000',
 } as const
 
 // Get contract address for current network
 export const getContractAddress = (chainId: number): string => {
-  return CONTRACT_ADDRESSES[chainId as keyof typeof CONTRACT_ADDRESSES] || CONTRACT_ADDRESSES[11155111]
+  return CONTRACT_ADDRESSES[chainId as keyof typeof CONTRACT_ADDRESSES] || CONTRACT_ADDRESSES[4202]
 }
 
-// Default to Sepolia for development
-export const CONTRACT_ADDRESS = '0x6767Dd3830A88DED122c5dA4d05D052227097886'
+// Default to Lisk Sepolia for development
+export const CONTRACT_ADDRESS = '0x6C74B43b04C17322c5DfCE754b1d321EF7DF1a2c'
 
 // Contract ABI (Application Binary Interface) - JSON format for better wagmi compatibility
 export const BOOMER_CHAT_ABI = [
