@@ -5,7 +5,9 @@
 .env.test
 .env.production
 **/.env
-**/.env.*
+# Allow example files
+!.env.example
+!**/.env.example
 
 # Dependencies
 node_modules/
