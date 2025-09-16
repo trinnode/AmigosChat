@@ -2,8 +2,8 @@
 
 A decentralized chat application with .boomer domain registration on Ethereum.
 
-## Live Demo
-[BoomerChat dApp](http://localhost:5175) *(Development Server)*
+## Live Link
+[BoomerChat dApp](https://chatting-dapp-oda6.vercel.app/)
 
 ## Features
 - **.boomer Domain Registration**: Claim your unique .boomer username
