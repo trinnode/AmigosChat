@@ -1,12 +1,12 @@
-# BoomerChat dApp
+# AmigoChat dApp
 
-A decentralized chat application with .boomer domain registration on Ethereum.
+A decentralized chat application with .Amigo domain registration on Ethereum.
 
 ## Live Link
-[BoomerChat dApp](https://chatting-dapp-oda6.vercel.app/)
+[AmigoChat dApp](https://amigos-chatv2.vercel.app/)
 
 ## Features
-- **.boomer Domain Registration**: Claim your unique .boomer username
+- **.Amigo Domain Registration**: Claim your unique .Amigo username
 - **On-chain Messaging**: All messages stored permanently on blockchain
 - **Group & Private Chat**: Public group chat and private direct messaging
 - **IPFS Profile Images**: Decentralized profile picture storage
@@ -14,14 +14,14 @@ A decentralized chat application with .boomer domain registration on Ethereum.
 
 ## 🛠 Tech Stack
 - **Frontend**: React + TypeScript + Vite + TailwindCSS
-- **Blockchain**: Ethereum (Sepolia Testnet)
+- **Blockchain**: Ethereum (Lisk Testnet)
 - **Smart Contract**: Solidity + Foundry
 - **Wallet**: RainbowKit + Wagmi
 - **Storage**: IPFS for profile images
 
 ## Contract Addresses
-- **Sepolia Testnet**: [`0x6767Dd3830A88DED122c5dA4d05D052227097886`](https://sepolia.etherscan.io/address/0x6767Dd3830A88DED122c5dA4d05D052227097886)
-- **Explorer**: [View on Etherscan](https://sepolia.etherscan.io/address/0x6767Dd3830A88DED122c5dA4d05D052227097886)
+- **Lisk Testnet**: [`0x6767Dd3830A88DED122c5dA4d05D052227097886`](https://Lisk.etherscan.io/address/0xE953c7658e3793d8E86A202d5eC039a1832fBdB5)
+- **Explorer**: [View on Etherscan](https://sepolia-lisk.blockscout.io/address/0xE953c7658e3793d8E86A202d5eC039a1832fBdB5)
 
 ## Quick Start
 
@@ -41,11 +41,11 @@ forge test
 
 ## 📝 Usage
 1. Connect your wallet (MetaMask recommended)
-2. Switch to Sepolia testnet
-3. Register your .boomer username
+2. Switch to Lisk testnet
+3. Register your .Amigo username
 4. Start chatting on-chain!
 
 ## 🧪 Testing
-- Connect wallet to Sepolia testnet
-- Get test ETH from [Sepolia Faucet](https://sepoliafaucet.com/)
-- Registration fee: 0.001 ETH
+- Connect wallet to Lisk testnet
+- Get test ETH from [Lisk Faucet](https://Liskfaucet.com/)
+- Registration fee: 0.0001 ETH

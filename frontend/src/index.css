@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Good+Timing&family=BoldPixels&family=Toxigenesis&display=swap');
 @import '@rainbow-me/rainbowkit/styles.css';
 @tailwind base;
 @tailwind components;
@@ -12,7 +13,7 @@
   
   html {
     font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Courier New', monospace;
-    background-color: #0D1117;
+    background-color: black;
     color: #F0F6FC;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,7 +22,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #0D1117;
+    background-color: black;
     color: #F0F6FC;
     overflow-x: hidden;
   }
@@ -244,14 +245,14 @@
 
   /* Retro Font Families */
   .font-pixel {
-    font-family: 'Orbitron', 'JetBrains Mono', monospace;
+    font-family: 'Good Timing', 'BoldPixels', 'Toxigenesis', 'Orbitron', 'JetBrains Mono', monospace;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   .font-retro {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-family: 'Good Timing', 'BoldPixels', 'Toxigenesis', 'JetBrains Mono', 'Courier New', monospace;
     font-weight: 400;
     letter-spacing: 0.05em;
   }
@@ -304,6 +305,19 @@
   /* Glitch text animation */
   .animate-glitch {
     animation: glitch-text 1s infinite;
+  }
+
+  .rotating-logo {
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes glitch-text {

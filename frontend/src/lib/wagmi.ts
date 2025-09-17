@@ -1,35 +1,38 @@
-import { createConfig, http } from 'wagmi'
-import { sepolia } from 'wagmi/chains'
-import { coinbaseWallet, injected, walletConnect } from 'wagmi/connectors'
+import { createConfig, http } from "wagmi";
+import { liskSepolia } from "wagmi/chains";
+import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
 
 // Environment variables (these will be set via .env file)
-const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || 'demo-project-id'
+const projectId =
+  import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || "demo-project-id";
 
 export const config = createConfig({
-  chains: [sepolia],
+  chains: [liskSepolia],
   connectors: [
     injected(),
-    coinbaseWallet({ 
-      appName: 'BoomerChat',
-      appLogoUrl: '/boomer-logo.png'
+    coinbaseWallet({
+      appName: "AmigoChat",
+      appLogoUrl: "/amigo.png",
     }),
-    walletConnect({ 
+    walletConnect({
       projectId,
       metadata: {
-        name: 'BoomerChat',
-        description: 'On-chain chat dApp with .boomer ENS',
-        url: 'https://boomerchat.app',
-        icons: ['https://boomerchat.app/logo.png']
-      }
+        name: "AmigoChat",
+        description: "On-chain chat dApp with .Amigo ENS",
+        url: "https://amigos-chatv2.vercel.app/",
+        icons: ["/amigo.png"],
+      },
     }),
   ],
   transports: {
-    [sepolia.id]: http(import.meta.env.VITE_SEPOLIA_RPC_URL || 'https://sepolia.infura.io/v3/demo'),
+    [liskSepolia.id]: http(
+      import.meta.env.VITE_Lisk_RPC_URL || "https://Lisk.infura.io/v3/demo"
+    ),
   },
-})
+});
 
-declare module 'wagmi' {
+declare module "wagmi" {
   interface Register {
-    config: typeof config
+    config: typeof config;
   }
 }

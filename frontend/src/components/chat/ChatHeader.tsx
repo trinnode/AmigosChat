@@ -110,7 +110,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
             ) : (
               <>
                 <span className="text-neon-pink">
-                  {chatUser?.username ? `${chatUser.username}.boomer` : formatAddress(chatUser?.address || '')}
+                  {chatUser?.username ? `${chatUser.username}.Amigo` : formatAddress(chatUser?.address || '')}
                 </span>
                 {chatUser && (
                   <>

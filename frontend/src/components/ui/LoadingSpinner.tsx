@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'circle' | 'dots' | 'bars' | 'pixel' | 'matrix'
-  color?: 'accent' | 'neon-cyan' | 'neon-pink' | 'neon-orange' | 'white'
+  color?: 'accent' | 'neon-cyan' | 'neon-pink' | 'neon-orange' | 'white' | 'burntOrange'
   className?: string
 }
 
@@ -26,7 +26,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     'neon-cyan': 'text-neon-cyan',
     'neon-pink': 'text-neon-pink',
     'neon-orange': 'text-neon-orange',
-    white: 'text-white',
+    'white': 'text-white',
+    'burntOrange': 'text-burntOrange',
   }
 
   if (variant === 'circle') {

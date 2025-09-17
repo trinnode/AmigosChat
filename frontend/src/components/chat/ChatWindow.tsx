@@ -93,7 +93,7 @@ export const ChatWindow: React.FC = () => {
         <div className="text-center text-white">
           <h2 className="text-2xl font-bold mb-4">Registration Required</h2>
           <p className="text-blue-200">
-            You must register your .boomer domain to access the chat
+            You must register your .Amigo domain to access the chat
           </p>
         </div>
       </div>
@@ -133,7 +133,7 @@ export const ChatWindow: React.FC = () => {
                   </h3>
                   <p className="text-blue-200">
                     {activeChat === null 
-                      ? 'Start a conversation with all boomers'
+                      ? 'Start a conversation with all Amigos'
                       : 'Send your first message to start the conversation'
                     }
                   </p>
@@ -153,7 +153,7 @@ export const ChatWindow: React.FC = () => {
         recipient={activeChat}
         placeholder={
           activeChat === null
-            ? 'Message all boomers...'
+            ? 'Message all Amigos...'
             : `Message ${currentChatUser?.displayName || 'user'}...`
         }
       />

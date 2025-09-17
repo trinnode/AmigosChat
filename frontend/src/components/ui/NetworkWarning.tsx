@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useNetworkValidation } from '../../hooks/useNetworkValidation'
 
 export const NetworkWarning: React.FC = () => {
-  const { isWrongNetwork, supportedChainName, switchToLiskSepolia, isSwitching } = useNetworkValidation()
+  const { isWrongNetwork, supportedChainName, switchToLiskLisk, isSwitching } = useNetworkValidation()
 
   if (!isWrongNetwork) return null
 
@@ -29,7 +29,7 @@ export const NetworkWarning: React.FC = () => {
           </div>
           
           <button
-            onClick={switchToLiskSepolia}
+            onClick={switchToLiskLisk}
             disabled={isSwitching}
             className="bg-white text-red-600 hover:bg-red-50 font-mono font-semibold px-4 py-2 rounded border-2 border-white hover:border-red-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
           >

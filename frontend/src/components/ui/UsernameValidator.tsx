@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useReadContract } from 'wagmi'
 import { motion } from 'framer-motion'
-import { BOOMER_CHAT_ABI } from '../../config/contracts'
+import { Amigo_CHAT_ABI } from '../../config/contracts'
 
 interface UsernameValidatorProps {
   username: string
@@ -30,8 +30,8 @@ export const UsernameValidator: React.FC<UsernameValidatorProps> = ({
   // Check if username exists on contract
   const { data: isUsernameAvailable, isLoading: isContractLoading } = useReadContract({
     address: contractAddress,
-    abi: BOOMER_CHAT_ABI,
-    functionName: 'isBoomerNameAvailable',
+    abi: Amigo_CHAT_ABI,
+    functionName: 'isAmigoNameAvailable',
     args: [username],
     query: {
       enabled: username.length >= 3, // Only check if username is at least 3 chars
@@ -95,7 +95,7 @@ export const UsernameValidator: React.FC<UsernameValidatorProps> = ({
     }
 
     // Reserved words check
-    const reservedWords = ['admin', 'moderator', 'boomer', 'chat', 'system', 'null', 'undefined']
+    const reservedWords = ['admin', 'moderator', 'Amigo', 'chat', 'system', 'null', 'undefined']
     if (reservedWords.includes(value.toLowerCase())) {
       return { isValid: false, error: 'This username is reserved', isChecking: false }
     }

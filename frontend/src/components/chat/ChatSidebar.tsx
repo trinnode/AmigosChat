@@ -71,10 +71,10 @@ export const ChatSidebar: React.FC = () => {
         </div>
 
         <h2 className="text-2xl font-bold text-white font-mono mb-2">
-          BoomerChat
+          AmigoChat
         </h2>
         <p className="text-blue-200 text-sm">
-          {users.length} boomer{users.length !== 1 ? 's' : ''} online
+          {users.length} Amigo{users.length !== 1 ? 's' : ''} online
         </p>
       </div>
 
@@ -100,7 +100,7 @@ export const ChatSidebar: React.FC = () => {
             <div className="flex-1 min-w-0">
               <h4 className="text-white font-semibold">Global Chat</h4>
               <p className="text-blue-200 text-sm">
-                Chat with all boomers
+                Chat with all Amigos
               </p>
             </div>
             {activeChat === null && (
@@ -170,7 +170,7 @@ export const ChatSidebar: React.FC = () => {
             <p className="text-blue-200 text-sm">
               No other users online yet.
               <br />
-              Share BoomerChat with your friends! 🚀
+              Share AmigoChat with your friends! 🚀
             </p>
           </div>
         )}

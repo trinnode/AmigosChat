@@ -9,6 +9,7 @@ import { RetroBackground } from '../components/ui/RetroBackground'
 import { NetworkWarning } from '../components/ui/NetworkWarning'
 import { useUserRegistration } from '../hooks/useUserRegistration'
 import { useNetworkValidation } from '../hooks/useNetworkValidation'
+import amigoLogo from '../../public/amigo.png'
 
 export const LandingPage: React.FC = () => {
   const navigate = useNavigate()
@@ -39,23 +40,24 @@ export const LandingPage: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-12"
+            className="mb-16"
           >
+            <img src={amigoLogo} alt="Amigo Logo" className="w-32 h-22 mx-auto mb-12 rotating-logo" />
             {/* Title with glitch effect */}
             <motion.h1
-              className="text-6xl md:text-8xl font-pixel text-accent mb-6 text-shadow-neon"
+              className="text-4xl md:text-6xl font-pixel text-accent mb-6 text-shadow-neon"
               animate={{
                 textShadow: [
-                  '0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41',
-                  '0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41',
-                  '0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41',
+                  '0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 15px #FF4500',
+                  '0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500',
+                  '0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 15px #FF4500',
                 ],
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              BOOMER
+              Amigo
               <motion.span 
-                className="block text-neon-cyan"
+                className="block text-burntOrange"
                 animate={{ opacity: [1, 0.5, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
@@ -72,7 +74,7 @@ export const LandingPage: React.FC = () => {
             >
               The most exclusive retro chat experience on the blockchain.
               <br />
-              <span className="text-neon-pink">Claim your .boomer domain today!</span>
+              <span className="text-burgundy">Claim your .Amigo domain today!</span>
             </motion.p>
           </motion.div>
 
@@ -101,7 +103,7 @@ export const LandingPage: React.FC = () => {
                 {isConnected && (
                   <div className="flex items-center justify-between">
                     <span className="text-text-secondary">Wallet:</span>
-                    <span className="text-neon-cyan font-mono text-sm">
+                    <span className="text-burntOrange font-mono text-sm">
                       {formatAddress(address!)}
                     </span>
                   </div>
@@ -116,19 +118,19 @@ export const LandingPage: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="bg-black/30 backdrop-blur-lg border border-white/10 rounded-lg p-6 crt-effect"
             >
-              <h3 className="text-neon-pink font-pixel text-lg mb-4">REGISTRATION</h3>
+              <h3 className="text-burgundy font-pixel text-lg mb-4">REGISTRATION</h3>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Domain:</span>
                   <span className={user?.isRegistered ? 'text-accent' : 'text-gray-400'}>
-                    {user?.isRegistered ? `${user.username}.boomer` : 'Not claimed'}
+                    {user?.isRegistered ? `${user.username}.Amigo` : 'Not claimed'}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Status:</span>
                   <div className="flex items-center gap-2">
                     {isCheckingRegistration ? (
-                      <LoadingSpinner size="sm" variant="dots" color="neon-cyan" />
+                      <LoadingSpinner size="sm" variant="dots" color="burntOrange" />
                     ) : (
                       <>
                         <div className={`w-2 h-2 rounded-full ${
@@ -151,11 +153,11 @@ export const LandingPage: React.FC = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="bg-black/30 backdrop-blur-lg border border-white/10 rounded-lg p-6 crt-effect"
             >
-              <h3 className="text-neon-orange font-pixel text-lg mb-4">NETWORK</h3>
+              <h3 className="text-burntOrange font-pixel text-lg mb-4">NETWORK</h3>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Chain:</span>
-                  <span className="text-neon-orange">SEPOLIA</span>
+                  <span className="text-burntOrange">Lisk</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Protocol:</span>
@@ -178,8 +180,8 @@ export const LandingPage: React.FC = () => {
                 <ConnectButton />
                 
                 <p className="text-text-secondary text-sm font-mono text-center max-w-md">
-                  Connect your wallet to access the BoomerChat network.<br />
-                  Make sure you're on Sepolia testnet.
+                  Connect your wallet to access the AmigoChat network.<br />
+                  Make sure you're on Lisk testnet.
                 </p>
               </div>
             ) : user?.isRegistered ? (
@@ -208,7 +210,7 @@ export const LandingPage: React.FC = () => {
                     neonGlow
                     className="mx-auto min-w-64"
                   >
-                    REGISTER .BOOMER
+                    REGISTER .Amigo
                   </PixelatedButton>
                 </Link>
                 

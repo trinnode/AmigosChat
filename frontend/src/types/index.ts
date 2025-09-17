@@ -1,5 +1,5 @@
-export interface BoomerProfile {
-  boomerName: string;
+export interface AmigoProfile {
+  AmigoName: string;
   ipfsImageHash: string;
   registrationTime: number;
   isOnline: boolean;
@@ -10,7 +10,7 @@ export interface Message {
   sender: `0x${string}`;
   content: string;
   timestamp: number;
-  status: 'pending' | 'sent' | 'delivered' | 'failed';
+  status: "pending" | "sent" | "delivered" | "failed";
   recipient?: `0x${string}`; // Optional for direct messages
 }
 
@@ -20,14 +20,14 @@ export interface DirectMessage extends Message {
 
 export interface User {
   address: `0x${string}`;
-  boomerName: string;
+  AmigoName: string;
   profileImage: string;
   isOnline: boolean;
   registrationTime: number;
 }
 
 export interface ChatState {
-  activeChat: 'group' | `0x${string}`;
+  activeChat: "group" | `0x${string}`;
   groupMessages: Message[];
   directMessages: Map<string, Message[]>;
   typingUsers: Set<string>;
@@ -40,7 +40,12 @@ export interface UserState {
   currentUser: User | null;
   allUsers: User[];
   isRegistered: boolean;
-  registrationStatus: 'idle' | 'checking' | 'registering' | 'complete' | 'failed';
+  registrationStatus:
+    | "idle"
+    | "checking"
+    | "registering"
+    | "complete"
+    | "failed";
 }
 
 export interface WalletState {
@@ -53,9 +58,9 @@ export interface WalletState {
 }
 
 // Contract event types
-export interface BoomerUserRegisteredEvent {
+export interface AmigoUserRegisteredEvent {
   user: `0x${string}`;
-  boomerName: string;
+  AmigoName: string;
   ipfsImageHash: string;
   timestamp: bigint;
 }

@@ -9,7 +9,7 @@ import { UsernameValidator } from '../components/ui/UsernameValidator'
 import { LoadingSpinner } from '../components/ui/LoadingSpinner'
 import { RetroBackground } from '../components/ui/RetroBackground'
 import { NetworkWarning } from '../components/ui/NetworkWarning'
-import { useBoomerRegistration } from '../hooks/useBoomerRegistration'
+import { useAmigoRegistration } from '../hooks/useAmigoRegistration'
 import { useNetworkValidation } from '../hooks/useNetworkValidation'
 import { CONTRACT_ADDRESS } from '../config/contracts'
 
@@ -40,7 +40,7 @@ export const RegisterPage: React.FC = () => {
     error,
     registerUser,
     resetState,
-  } = useBoomerRegistration()
+  } = useAmigoRegistration()
 
   // Redirect if not connected
   if (!isConnected) {
@@ -66,8 +66,8 @@ export const RegisterPage: React.FC = () => {
                 ACCESS DENIED
               </h2>
               <p className="text-text-secondary mb-6 font-retro">
-                Neural link not established.<br />
-                Please connect your cyber wallet to proceed.
+                Amigos fantacy not established.<br />
+                Please connect your Amigos wallet to proceed.
               </p>
               <Link to="/">
                 <PixelatedButton variant="danger" size="lg" neonGlow>
@@ -120,8 +120,8 @@ export const RegisterPage: React.FC = () => {
               </motion.h2>
               
               <p className="text-text-secondary mb-8 font-retro text-lg">
-                Welcome to the neural network, cyber warrior!<br />
-                Your <span className="text-neon-pink">.boomer</span> domain is now online.
+                Welcome to the neural network, Amigos warrior!<br />
+                Your <span className="text-neon-pink">.Amigo</span> domain is now online.
               </p>
               
               <div className="space-y-4">
@@ -222,8 +222,8 @@ export const RegisterPage: React.FC = () => {
                 <span className="text-neon-pink">REGISTRATION</span>
               </motion.h1>
               <p className="text-text-secondary font-retro text-lg">
-                Initialize your cyber identity in the 
-                <span className="text-neon-cyan"> .boomer </span>
+                Initialize your Amigos identity in the 
+                <span className="text-neon-cyan"> .Amigo </span>
                 dimension
               </p>
             </motion.div>
@@ -279,13 +279,13 @@ export const RegisterPage: React.FC = () => {
                       type="text"
                       value={formData.username}
                       onChange={(e) => handleInputChange('username', e.target.value)}
-                      placeholder="cyber_warrior_1337"
+                      placeholder="trinnex"
                       className="w-full pr-24"
                       disabled={isLoading}
                       variant="neon"
                     />
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                      <span className="text-neon-pink font-pixel text-lg">.boomer</span>
+                      <span className="text-neon-pink font-pixel text-lg">.Amigo</span>
                     </div>
                   </div>
                   <UsernameValidator
@@ -309,7 +309,7 @@ export const RegisterPage: React.FC = () => {
                     type="text"
                     value={formData.displayName}
                     onChange={(e) => handleInputChange('displayName', e.target.value)}
-                    placeholder="Neo Anderson"
+                    placeholder="Iron Man"
                     className="w-full"
                     disabled={isLoading}
                     variant="retro"
@@ -382,11 +382,11 @@ export const RegisterPage: React.FC = () => {
                       </div>
                     ) : !isCorrectNetwork ? (
                       <span className="font-pixel text-red-400">
-                        WRONG NETWORK - SWITCH TO SEPOLIA
+                        WRONG NETWORK - SWITCH TO Lisk
                       </span>
                     ) : (
                       <span className="font-pixel">
-                        REGISTER .BOOMER DOMAIN (0.001 ETH)
+                        REGISTER .Amigo DOMAIN (0.0001 ETH)
                       </span>
                     )}
                   </PixelatedButton>
@@ -412,8 +412,8 @@ export const RegisterPage: React.FC = () => {
             >
               <div className="bg-black/30 backdrop-blur-sm border border-accent/20 rounded-lg p-6">
                 <p className="text-text-secondary font-mono leading-relaxed">
-                  Neural link initialization requires a small energy fee to maintain network stability.<br />
-                  Your <span className="text-neon-pink">.boomer</span> domain will be permanently encoded 
+                  Amigos fantacy initialization requires a small energy fee to maintain network stability.<br />
+                  Your <span className="text-neon-pink">.Amigo</span> domain will be permanently encoded 
                   in the blockchain matrix! <span className="text-accent">🚀</span>
                 </p>
               </div>

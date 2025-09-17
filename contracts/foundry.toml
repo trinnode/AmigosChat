@@ -6,25 +6,23 @@ solc_version = "0.8.24"
 optimizer = true
 optimizer_runs = 200
 via_ir = true
-remappings = [
-    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"
-]
+remappings = ["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"]
 
-[profile.sepolia]
-fork_url = "${SEPOLIA_RPC_URL}"
-chain_id = 11155111
+# [profile.Lisk]
+# fork_url = "${Lisk_RPC_URL}"
+# chain_id = 4202
 
-[profile.lisk_sepolia]
-fork_url = "${LISK_SEPOLIA_RPC_URL}"
+[profile.lisk_Lisk]
+fork_url = "${RPC_URL}"
 chain_id = 4202
 
 [etherscan]
-sepolia = { key = "${ETHERSCAN_API_KEY}", url = "https://api-sepolia.etherscan.io/api" }
-lisk_sepolia = { key = "${LISK_SEPOLIA_API_KEY}", url = "https://sepolia-blockscout.lisk.com/api" }
+# Lisk = { key = "${ETHERSCAN_API_KEY}", url = "https://api-Lisk.etherscan.io/api" }
+lisk_Lisk = { key = "123", url = "https://Lisk-blockscout.lisk.com/api" }
 
 [rpc_endpoints]
-sepolia = "${SEPOLIA_RPC_URL}"
-lisk_sepolia = "${LISK_SEPOLIA_RPC_URL}"
+Lisk = "${Lisk_RPC_URL}"
+lisk_Lisk = "${RPC_URL}"
 
 [fmt]
 line_length = 100
