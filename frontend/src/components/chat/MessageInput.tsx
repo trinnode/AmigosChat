@@ -143,7 +143,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
             textareaRef.current?.focus()
           }}
           className="p-3 text-neon-pink hover:text-accent bg-black/40 hover:bg-black/60 border border-neon-pink/50 hover:border-accent/50 transition-all duration-300"
-          title="Neural Emoji Injection"
+          title="Amigos Emoji Injection"
           style={{ borderRadius: '8px' }}
         >
           <motion.svg

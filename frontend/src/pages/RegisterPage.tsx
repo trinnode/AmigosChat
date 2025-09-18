@@ -47,7 +47,7 @@ export const RegisterPage: React.FC = () => {
     return (
       <>
         <NetworkWarning />
-        <RetroBackground variant="matrix" intensity="high" />
+        <RetroBackground variant="league" intensity="high" />
         <div className="min-h-screen flex items-center justify-center p-4 relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -120,7 +120,7 @@ export const RegisterPage: React.FC = () => {
               </motion.h2>
               
               <p className="text-text-secondary mb-8 font-retro text-lg">
-                Welcome to the neural network, Amigos warrior!<br />
+                Welcome to the Amigos network, Amigos warrior!<br />
                 Your <span className="text-neon-pink">.Amigo</span> domain is now online.
               </p>
               
@@ -216,7 +216,7 @@ export const RegisterPage: React.FC = () => {
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                NEURAL LINK
+                AMIGOS LINK
                 <br />
                 <span className="text-neon-pink">REGISTRATION</span>
               </motion.h1>
@@ -257,7 +257,7 @@ export const RegisterPage: React.FC = () => {
                   <p className="text-sm text-text-secondary mt-3 font-mono">
                     Data will be stored in the 
                     <span className="text-neon-orange"> IPFS </span>
-                    decentralized matrix
+                    decentralized league
                   </p>
                 </motion.div>
 
@@ -268,7 +268,7 @@ export const RegisterPage: React.FC = () => {
                   transition={{ delay: 0.4 }}
                 >
                   <label className="block text-accent font-pixel text-xl mb-3 text-shadow-glow">
-                    CYBER HANDLE <span className="text-red-400 animate-pulse">*</span>
+                    LEAGUE HANDLE <span className="text-red-400 animate-pulse">*</span>
                   </label>
                   <p className="text-text-secondary text-sm font-mono mb-2">
                     Only lowercase letters, numbers, and underscores allowed. Uppercase letters will be converted automatically.
@@ -287,6 +287,7 @@ export const RegisterPage: React.FC = () => {
                       <span className="text-neon-pink font-pixel text-lg">.Amigo</span>
                     </div>
                   </div>
+                  
                   <UsernameValidator
                     username={formData.username}
                     contractAddress={CONTRACT_ADDRESS}
@@ -314,7 +315,7 @@ export const RegisterPage: React.FC = () => {
                     variant="retro"
                   />
                   <p className="text-sm text-text-secondary mt-2 font-mono">
-                    How other users will identify you in the matrix
+                    How other users will identify you in the league
                   </p>
                 </motion.div>
 
@@ -376,8 +377,8 @@ export const RegisterPage: React.FC = () => {
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-4">
-                        <LoadingSpinner size="md" variant="matrix" color="neon-cyan" />
-                        <span className="font-pixel">INITIALIZING NEURAL LINK...</span>
+                        <LoadingSpinner size="md" variant="league" color="neon-cyan" />
+                        <span className="font-pixel">INITIALIZING AMIGOS LINK...</span>
                       </div>
                     ) : !isCorrectNetwork ? (
                       <span className="font-pixel text-red-400">
@@ -413,7 +414,7 @@ export const RegisterPage: React.FC = () => {
                 <p className="text-text-secondary font-mono leading-relaxed">
                   Amigos fantacy initialization requires a small energy fee to maintain network stability.<br />
                   Your <span className="text-neon-pink">.Amigo</span> domain will be permanently encoded 
-                  in the blockchain matrix! <span className="text-accent">🚀</span>
+                  in the blockchain league! <span className="text-accent">🚀</span>
                 </p>
               </div>
             </motion.div>

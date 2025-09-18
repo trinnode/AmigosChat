@@ -1,7 +1,7 @@
 // Contract addresses for different networks
 export const CONTRACT_ADDRESSES = {
   // Lisk Lisk testnet - Active deployment
-  4202: "0xE953c7658e3793d8E86A202d5eC039a1832fBdB5.", // Deployed AmigoChatRegistry on Lisk Lisk
+  4202: "0xE953c7658e3793d8E86A202d5eC039a1832fBdB5", // Deployed AmigoChatRegistry on Lisk Lisk
 } as const;
 
 // Get contract address for current network
@@ -13,7 +13,7 @@ export const getContractAddress = (chainId: number): string => {
 };
 
 // Default to Lisk Lisk for development
-export const CONTRACT_ADDRESS = "0xE953c7658e3793d8E86A202d5eC039a1832fBdB5.";
+export const CONTRACT_ADDRESS = "0xE953c7658e3793d8E86A202d5eC039a1832fBdB5";
 
 // Contract ABI (Application Binary Interface) - JSON format for better wagmi compatibility
 export const Amigo_CHAT_ABI = [

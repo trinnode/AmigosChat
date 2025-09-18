@@ -97,7 +97,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
             animate={{ opacity: [0.8, 1, 0.8] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            {isGroupChat ? 'GLOBAL MATRIX' : chatUser?.displayName || 'UNKNOWN_USER'}
+            {isGroupChat ? 'GLOBAL LEAQUE' : chatUser?.displayName || 'UNKNOWN_USER'}
           </motion.h2>
           <div className="flex items-center gap-2 text-neon-cyan text-sm font-retro">
             {isGroupChat ? (
@@ -124,7 +124,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
                         transition={{ duration: 1.5, repeat: Infinity }}
                       />
                       <span className="text-xs uppercase tracking-wider">
-                        {chatUser.isOnline ? 'NEURAL_LINK_ACTIVE' : 'DISCONNECTED'}
+                        {chatUser.isOnline ? 'AMIGOS_LINK_ACTIVE' : 'DISCONNECTED'}
                       </span>
                     </div>
                   </>
