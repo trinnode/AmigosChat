@@ -68,6 +68,7 @@ export const CacheManager = {
       );
       return isFresh;
     } catch (error) {
+      console.error("Error", error);
       return false;
     }
   },
