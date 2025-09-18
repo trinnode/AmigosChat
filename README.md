@@ -3,7 +3,7 @@
 A decentralized chat application with .Amigo domain registration on Ethereum.
 
 ## Live Link
-[AmigoChat dApp](https://amigos-chatv2.vercel.app/)
+[AmigoChat dApp](https://amigos-chat-v2.vercel.app/)
 
 ## Features
 - **.Amigo Domain Registration**: Claim your unique .Amigo username
@@ -20,8 +20,8 @@ A decentralized chat application with .Amigo domain registration on Ethereum.
 - **Storage**: IPFS for profile images
 
 ## Contract Addresses
-- **Lisk Testnet**: [`0x6767Dd3830A88DED122c5dA4d05D052227097886`](https://Lisk.etherscan.io/address/0xE953c7658e3793d8E86A202d5eC039a1832fBdB5)
-- **Explorer**: [View on Etherscan](https://sepolia-lisk.blockscout.io/address/0xE953c7658e3793d8E86A202d5eC039a1832fBdB5)
+- **Lisk Testnet**: [`0xE953c7658e3793d8E86A202d5eC039a1832fBdB5`](https://Lisk.etherscan.io/address/0xE953c7658e3793d8E86A202d5eC039a1832fBdB5)
+- **Explorer**: [View on Etherscan](https://sepolia-blockscout.lisk.com/address/0xE953c7658e3793d8E86A202d5eC039a1832fBdB5)
 
 ## Quick Start
 
@@ -47,5 +47,5 @@ forge test
 
 ## 🧪 Testing
 - Connect wallet to Lisk testnet
-- Get test ETH from [Lisk Faucet](https://Liskfaucet.com/)
+- Get test ETH from [Lisk Faucet](https://sepolia-faucet.lisk.com/)
 - Registration fee: 0.0001 ETH
