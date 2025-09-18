@@ -287,6 +287,7 @@ export const RegisterPage: React.FC = () => {
                       <span className="text-neon-pink font-pixel text-lg">.Amigo</span>
                     </div>
                   </div>
+                  
                   <UsernameValidator
                     username={formData.username}
                     contractAddress={CONTRACT_ADDRESS}
