@@ -3,7 +3,7 @@ import { liskSepolia } from "wagmi/chains";
 import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
 
 // Environment variables (these will be set via .env file)
-const projectId =  import.meta.env.VITE_WALLETCONNECT_PROJECT_ID;
+const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID;
 
 export const config = createConfig({
   chains: [liskSepolia],
@@ -35,4 +35,3 @@ declare module "wagmi" {
 }
 export { liskSepolia };
 export const SUPPORTED_CHAIN = liskSepolia;
-
