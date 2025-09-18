@@ -131,7 +131,7 @@ export const RegisterPage: React.FC = () => {
                   onClick={() => navigate('/dashboard')}
                   className="w-full"
                 >
-                  ENTER THE MATRIX →
+                  ENTER THE AMIGOS →
                 </PixelatedButton>
                 
                 <button
@@ -243,7 +243,7 @@ export const RegisterPage: React.FC = () => {
                   className="text-center"
                 >
                   <label className="block text-accent font-pixel text-xl mb-4 text-shadow-glow">
-                    AVATAR MATRIX (Optional)
+                    AVATAR AMIGOS (Optional)
                   </label>
                   <div className="flex justify-center">
                     <div className="relative">
