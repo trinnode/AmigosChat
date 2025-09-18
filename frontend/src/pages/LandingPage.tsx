@@ -9,7 +9,7 @@ import { RetroBackground } from '../components/ui/RetroBackground'
 import { NetworkWarning } from '../components/ui/NetworkWarning'
 import { useUserRegistration } from '../hooks/useUserRegistration'
 import { useNetworkValidation } from '../hooks/useNetworkValidation'
-import amigoLogo from '../../public/amigo.png'
+// import amigoLogo from '../../public/amigo.png'
 
 export const LandingPage: React.FC = () => {
   const navigate = useNavigate()
@@ -38,27 +38,21 @@ export const LandingPage: React.FC = () => {
           {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 3, y: 10 }}
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <img src={amigoLogo} alt="Amigo Logo" className="w-32 h-22 mx-auto mb-12 rotating-logo" />
+            {/* <img src={amigoLogo} alt="Amigo Logo" className="w-32 h-22 mx-auto mb-12 rotating-logo" /> */}
             {/* Title with glitch effect */}
             <motion.h1
-              className="text-4xl md:text-6xl font-pixel text-accent mb-6 text-shadow-neon"
-              animate={{
-                textShadow: [
-                  '0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 15px #FF4500',
-                  '0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500',
-                  '0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 15px #FF4500',
-                ],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
+              className="text-4xl md:text-8xl font-pixel mb-10"
+              animate={{ opacity: [0.8, 1, 0.5] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
             >
               Amigo
               <motion.span 
-                className="block text-burntOrange"
-                animate={{ opacity: [1, 0.5, 1] }}
+                className="block"
+                animate={{ opacity: [0.2, 0.5, 0.1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
                 CHAT
@@ -74,7 +68,7 @@ export const LandingPage: React.FC = () => {
             >
               The most exclusive retro chat experience on the blockchain.
               <br />
-              <span className="text-burgundy">Claim your .Amigo domain today!</span>
+              <span className="text-retro-yellow">Claim your .Amigo domain today!</span>
             </motion.p>
           </motion.div>
 
@@ -118,7 +112,7 @@ export const LandingPage: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="bg-black/30 backdrop-blur-lg border border-white/10 rounded-lg p-6 crt-effect"
             >
-              <h3 className="text-burgundy font-pixel text-lg mb-4">REGISTRATION</h3>
+              <h3 className="text-retro-yellow font-pixel text-lg mb-4">REGISTRATION</h3>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Domain:</span>
@@ -157,11 +151,11 @@ export const LandingPage: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Chain:</span>
-                  <span className="text-burntOrange">Lisk</span>
+                  <span className="text-blue-300">Lisk</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-text-secondary">Protocol:</span>
-                  <span className="text-accent">ETHEREUM</span>
+                  <span className="text-blue-600">ETHEREUM</span>
                 </div>
               </div>
             </motion.div>
@@ -175,7 +169,7 @@ export const LandingPage: React.FC = () => {
             className="space-y-6"
           >
             {!isConnected ? (
-              <div className="space-y-4 flex flex-col items-center">
+              <div className="space-y-4 flex flex-col items-center text-retro-dark">
                 {/* Use default RainbowKit ConnectButton */}
                 <ConnectButton />
                 
@@ -190,7 +184,6 @@ export const LandingPage: React.FC = () => {
                   variant="primary"
                   size="xl"
                   onClick={() => navigate('/dashboard')}
-                  neonGlow
                   className="mx-auto min-w-64"
                 >
                   ENTER CHAT ROOM
@@ -207,7 +200,6 @@ export const LandingPage: React.FC = () => {
                   <PixelatedButton
                     variant="retro"
                     size="xl"
-                    neonGlow
                     className="mx-auto min-w-64"
                   >
                     REGISTER .Amigo

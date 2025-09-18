@@ -15,7 +15,7 @@ export const PixelatedInput = forwardRef<HTMLInputElement, PixelatedInputProps>(
     const variantClasses = {
       default: 'border-gray-600 focus:border-accent',
       retro: 'border-neon-cyan/50 focus:border-neon-cyan crt-scanlines',
-      neon: 'border-neon-pink/50 focus:border-neon-pink text-shadow-glow'
+      neon: 'border-neon-pink/50 focus:border-neon-pink'
     }
 
     return (

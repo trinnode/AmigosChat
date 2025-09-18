@@ -57,7 +57,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
-      handleSubmit(e as any)
+      handleSubmit(e)
     }
   }
 
@@ -169,7 +169,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({
           whileTap={message.trim() && !isSendingMessage ? { scale: 0.95 } : {}}
           className={`p-3 transition-all font-pixel text-sm border-2 ${
             message.trim() && !isSendingMessage
-              ? 'bg-gradient-to-r from-accent to-neon-cyan text-black border-accent hover:from-neon-cyan hover:to-accent animate-pulse-glow'
+              ? 'bg-gradient-to-r from-accent to-neon-cyan text-black border-accent hover:from-neon-cyan hover:to-accent'
               : 'bg-gray-600/50 text-gray-400 border-gray-600/50 cursor-not-allowed'
           }`}
           style={{ borderRadius: '8px' }}

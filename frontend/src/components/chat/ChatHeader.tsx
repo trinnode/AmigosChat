@@ -50,7 +50,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
         <div className="relative">
           {isGroupChat ? (
             <motion.div
-              className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center border-2 border-accent animate-pulse-glow"
+              className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center border-2 border-accent"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -68,7 +68,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
             />
           ) : (
             <motion.div
-              className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-pink to-neon-orange flex items-center justify-center border-2 border-accent text-shadow-neon"
+              className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-pink to-neon-orange flex items-center justify-center border-2 border-accent"
               whileHover={{ scale: 1.1, rotate: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -93,7 +93,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
         {/* Enhanced Chat Info */}
         <div className="flex-1 min-w-0">
           <motion.h2
-            className="text-accent font-pixel text-lg truncate text-shadow-glow mb-1"
+            className="text-accent font-pixel text-lg truncate mb-1"
             animate={{ opacity: [0.8, 1, 0.8] }}
             transition={{ duration: 3, repeat: Infinity }}
           >

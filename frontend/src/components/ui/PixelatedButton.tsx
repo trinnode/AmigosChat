@@ -7,7 +7,6 @@ interface PixelatedButtonProps extends Omit<HTMLMotionProps<"button">, 'children
   size?: 'sm' | 'md' | 'lg' | 'xl'
   isLoading?: boolean
   glitch?: boolean
-  neonGlow?: boolean
   children: React.ReactNode
 }
 
@@ -16,7 +15,6 @@ export const PixelatedButton: React.FC<PixelatedButtonProps> = ({
   size = 'md',
   isLoading = false,
   glitch = false,
-  neonGlow = false,
   children,
   className,
   disabled,
@@ -42,7 +40,6 @@ export const PixelatedButton: React.FC<PixelatedButtonProps> = ({
       bg-accent border-accent text-black
       hover:bg-neon-cyan hover:border-neon-cyan hover:text-black
       active:bg-accent/80
-      shadow-neon-sm hover:shadow-neon
     `,
     secondary: `
       bg-transparent border-text-primary text-text-primary
@@ -53,13 +50,10 @@ export const PixelatedButton: React.FC<PixelatedButtonProps> = ({
       bg-error border-error text-white
       hover:bg-neon-pink hover:border-neon-pink
       active:bg-error/80
-      shadow-neon-sm hover:shadow-neon
     `,
     neon: `
       bg-transparent border-neon-cyan text-neon-cyan
       hover:bg-neon-cyan hover:text-black
-      shadow-neon hover:shadow-neon-lg
-      animate-glow
     `,
     retro: `
       bg-retro-purple border-retro-cyan text-retro-cyan
@@ -72,7 +66,6 @@ export const PixelatedButton: React.FC<PixelatedButtonProps> = ({
     baseClasses,
     sizeClasses[size],
     variantClasses[variant],
-    neonGlow && 'animate-neon-pulse',
     glitch && 'animate-glitch',
     className
   )

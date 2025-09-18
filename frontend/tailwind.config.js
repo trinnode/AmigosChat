@@ -49,27 +49,16 @@ export default {
       },
       animation: {
         "bounce-slow": "bounce 2s infinite",
-        "pulse-accent": "pulse-accent 2s infinite",
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         typing: "typing 1.5s ease-in-out infinite alternate",
         wiggle: "wiggle 1s ease-in-out infinite",
-        glow: "glow 2s ease-in-out infinite alternate",
         scan: "scan 2s linear infinite",
         glitch: "glitch 0.3s ease-in-out infinite",
         float: "float 3s ease-in-out infinite",
         "pixel-fade": "pixelFade 0.5s ease-in-out",
-        "neon-pulse": "neonPulse 1.5s ease-in-out infinite",
         "matrix-rain": "matrixRain 20s linear infinite",
       },
       keyframes: {
-        "pulse-accent": {
-          "0%, 100%": {
-            "box-shadow": "0 0 0 0 rgba(0, 255, 65, 0.7)",
-          },
-          "50%": {
-            "box-shadow": "0 0 0 10px rgba(0, 255, 65, 0)",
-          },
-        },
         typing: {
           "0%": { opacity: "0.5" },
           "100%": { opacity: "1" },
@@ -77,16 +66,6 @@ export default {
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
-        },
-        glow: {
-          "0%": {
-            boxShadow:
-              "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor",
-          },
-          "100%": {
-            boxShadow:
-              "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor",
-          },
         },
         scan: {
           "0%": { transform: "translateX(-100%)" },
@@ -108,31 +87,15 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.8)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
-        neonPulse: {
-          "0%, 100%": {
-            textShadow:
-              "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor",
-          },
-          "50%": {
-            textShadow:
-              "0 0 2px currentColor, 0 0 5px currentColor, 0 0 8px currentColor",
-          },
-        },
         matrixRain: {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(100vh)" },
         },
       },
       boxShadow: {
-        neon: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor",
-        "neon-sm":
-          "0 0 2px currentColor, 0 0 5px currentColor, 0 0 10px currentColor",
-        "neon-lg":
-          "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor",
         pixel: "4px 4px 0px rgba(0,0,0,0.3)",
         "pixel-lg": "8px 8px 0px rgba(0,0,0,0.3)",
         retro: "inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.8)",
-        "inner-glow": "inset 0 0 10px rgba(0,255,65,0.3)",
       },
       backdropBlur: {
         xs: "2px",
@@ -142,10 +105,6 @@ export default {
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {
-        ".text-shadow-neon": {
-          textShadow:
-            "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor",
-        },
         ".text-shadow-pixel": {
           textShadow: "2px 2px 0px rgba(0,0,0,0.8)",
         },
