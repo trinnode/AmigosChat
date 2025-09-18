@@ -2,14 +2,14 @@
 import { useEffect } from "react";
 import { useAccount, useChainId, useSwitchChain } from "wagmi";
 import { toast } from "react-hot-toast";
-import { SUPPORTED_CHAIN } from "../config/wagmi";
+import { liskSepolia } from "../config/wagmi";
 
 export const useNetworkValidation = () => {
   const { isConnected } = useAccount();
   const chainId = useChainId();
   const { switchChain, isPending: isSwitching } = useSwitchChain();
 
-  const isCorrectNetwork = chainId === (SUPPORTED_CHAIN.id as any);
+  const isCorrectNetwork = chainId === (liskSepolia.id as any);
   const isWrongNetwork = isConnected && !isCorrectNetwork;
 
   const switchToLiskLisk = () => {
@@ -19,10 +19,10 @@ export const useNetworkValidation = () => {
     }
 
     switchChain(
-      { chainId: SUPPORTED_CHAIN.id as any },
+      { chainId: liskSepolia.id as any },
       {
         onSuccess: () => {
-          toast.success(`Successfully switched to ${SUPPORTED_CHAIN.name}`);
+          toast.success(`Successfully switched to ${liskSepolia.name}`);
         },
         onError: (error) => {
           console.error("Network switch failed:", error);
@@ -47,7 +47,7 @@ export const useNetworkValidation = () => {
       const currentChainName = getChainName(chainId);
 
       toast.error(
-        `Wrong network detected! Please switch to ${SUPPORTED_CHAIN.name}.\nCurrently on: ${currentChainName}`,
+        `Wrong network detected! Please switch to ${liskSepolia.name}.\nCurrently on: ${currentChainName}`,
         {
           duration: 8000,
           id: "network-warning", // Prevent multiple toasts
@@ -61,8 +61,8 @@ export const useNetworkValidation = () => {
     isCorrectNetwork,
     isWrongNetwork,
     currentChainId: chainId,
-    supportedChainId: SUPPORTED_CHAIN.id,
-    supportedChainName: SUPPORTED_CHAIN.name,
+    supportedChainId: liskSepolia.id,
+    supportedChainName: liskSepolia.name,
     switchToLiskLisk,
     isSwitching,
   };
