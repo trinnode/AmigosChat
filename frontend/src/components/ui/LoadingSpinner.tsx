@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
-  variant?: 'circle' | 'dots' | 'bars' | 'pixel' | 'matrix'
+  variant?: 'circle' | 'dots' | 'bars' | 'pixel' | 'league'
   color?: 'accent' | 'neon-cyan' | 'neon-pink' | 'neon-orange' | 'white' | 'burntOrange'
   className?: string
 }

@@ -31,7 +31,7 @@ export const LandingPage: React.FC = () => {
   return (
     <>
       <NetworkWarning />
-      <RetroBackground variant="matrix" intensity="medium" />
+      <RetroBackground variant="league" intensity="medium" />
       
       <div className="min-h-screen flex items-center justify-center p-4 relative">
         <div className="max-w-4xl mx-auto text-center">

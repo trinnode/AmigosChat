@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 interface RetroBackgroundProps {
-  variant?: 'matrix' | 'grid' | 'stars' | 'gradient'
+  variant?: 'league' | 'grid' | 'stars' | 'gradient'
   intensity?: 'low' | 'medium' | 'high'
   className?: string
 }
@@ -15,7 +15,7 @@ export const RetroBackground: React.FC<RetroBackgroundProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    if (variant === 'matrix' && canvasRef.current) {
+    if (variant === 'league' && canvasRef.current) {
       const canvas = canvasRef.current
       const ctx = canvas.getContext('2d')
       if (!ctx) return
@@ -78,7 +78,7 @@ export const RetroBackground: React.FC<RetroBackgroundProps> = ({
 
   const getBackgroundClasses = () => {
     switch (variant) {
-      case 'matrix':
+      case 'league':
         return 'bg-black'
       case 'grid':
         return 'bg-gradient-to-br from-retro-dark via-retro-purple to-retro-blue retro-grid'
@@ -92,7 +92,7 @@ export const RetroBackground: React.FC<RetroBackgroundProps> = ({
 
   return (
     <div className={`fixed inset-0 -z-10 ${getBackgroundClasses()} ${className}`}>
-      {variant === 'matrix' && (
+      {variant === 'league' && (
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full opacity-60"
