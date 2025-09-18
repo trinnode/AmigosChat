@@ -62,7 +62,7 @@ export const RegisterPage: React.FC = () => {
               >
                 ⚠️
               </motion.div>
-              <h2 className="text-2xl font-pixel text-red-400 mb-4 text-shadow-neon">
+              <h2 className="text-2xl font-pixel text-red-400 mb-4">
                 ACCESS DENIED
               </h2>
               <p className="text-text-secondary mb-6 font-retro">
@@ -104,7 +104,7 @@ export const RegisterPage: React.FC = () => {
               </motion.div>
               
               <motion.h2
-                className="text-4xl font-pixel text-accent mb-4 text-shadow-neon"
+                className="text-4xl font-pixel text-accent mb-4"
                 animate={{
                   textShadow: [
                     '0 0 5px #00ff41, 0 0 10px #00ff41',
@@ -121,7 +121,7 @@ export const RegisterPage: React.FC = () => {
               
               <p className="text-text-secondary mb-8 font-retro text-lg">
                 Welcome to the Amigos network, Amigos warrior!<br />
-                Your <span className="text-neon-pink">.Amigo</span> domain is now online.
+                Your <span className="text-retro-yellow">.Amigo</span> domain is now online.
               </p>
               
               <div className="space-y-4">
@@ -139,7 +139,7 @@ export const RegisterPage: React.FC = () => {
                     resetState()
                     navigate('/')
                   }}
-                  className="text-neon-cyan hover:text-neon-pink transition-colors font-mono underline"
+                  className="text-neon-cyan hover:text-retro-yellow transition-colors font-mono underline"
                 >
                   ← Return to Mainframe
                 </button>
@@ -206,7 +206,7 @@ export const RegisterPage: React.FC = () => {
               className="text-center mb-8"
             >
               <motion.h1
-                className="text-5xl md:text-6xl font-pixel text-accent mb-4 text-shadow-neon"
+                className="text-5xl md:text-6xl font-pixel text-retro-orange mb-4"
                 animate={{
                   textShadow: [
                     '0 0 5px #00ff41, 0 0 10px #00ff41',
@@ -218,11 +218,11 @@ export const RegisterPage: React.FC = () => {
               >
                 AMIGOS LINK
                 <br />
-                <span className="text-neon-pink">REGISTRATION</span>
+                <span className="text-retro-orange">REGISTRATION</span>
               </motion.h1>
               <p className="text-text-secondary font-retro text-lg">
                 Initialize your Amigos identity in the 
-                <span className="text-neon-cyan"> .Amigo </span>
+                <span className="text-retro-purple"> .Amigo </span>
                 dimension
               </p>
             </motion.div>
@@ -242,7 +242,7 @@ export const RegisterPage: React.FC = () => {
                   transition={{ delay: 0.3 }}
                   className="text-center"
                 >
-                  <label className="block text-accent font-pixel text-xl mb-4 text-shadow-glow">
+                  <label className="block text-accent font-pixel text-xl mb-4 ">
                     AVATAR AMIGOS (Optional)
                   </label>
                   <div className="flex justify-center">
@@ -267,7 +267,7 @@ export const RegisterPage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <label className="block text-accent font-pixel text-xl mb-3 text-shadow-glow">
+                  <label className="block text-accent font-pixel text-xl mb-3">
                     LEAGUE HANDLE <span className="text-red-400 animate-pulse">*</span>
                   </label>
                   <p className="text-text-secondary text-sm font-mono mb-2">
@@ -284,7 +284,7 @@ export const RegisterPage: React.FC = () => {
                       variant="neon"
                     />
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                      <span className="text-neon-pink font-pixel text-lg">.Amigo</span>
+                      <span className="text-retro-blue font-pixel text-lg">.Amigo</span>
                     </div>
                   </div>
                   
@@ -302,7 +302,7 @@ export const RegisterPage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="block text-accent font-pixel text-xl mb-3 text-shadow-glow">
+                  <label className="block text-accent font-pixel text-xl mb-3 ">
                     DISPLAY NAME <span className="text-red-400 animate-pulse">*</span>
                   </label>
                   <PixelatedInput
@@ -325,7 +325,7 @@ export const RegisterPage: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <label className="block text-accent font-pixel text-xl mb-3 text-shadow-glow">
+                  <label className="block text-accent font-pixel text-xl mb-3 ">
                     BIO DATA (Optional)
                   </label>
                   <div className="relative">
