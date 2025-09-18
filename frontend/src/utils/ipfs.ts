@@ -66,7 +66,7 @@ class IPFSService {
       const data = await response.json();
       return {
         ipfsHash: data.IpfsHash,
-        url: `https://gateway.pinata.cloud/ipfs/${data.IpfsHash}`,
+        url: `https://ipfs.io/ipfs/${data.IpfsHash}`,
       };
     } catch (error) {
       console.error("IPFS upload error:", error);
@@ -80,7 +80,7 @@ class IPFSService {
    * Get file from IPFS
    */
   getFileUrl(ipfsHash: string): string {
-    return `https://gateway.pinata.cloud/ipfs/${ipfsHash}`;
+    return `https://ipfs.io/ipfs/${ipfsHash}`;
   }
 
   /**
