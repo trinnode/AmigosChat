@@ -122,47 +122,39 @@ class IPFSService {
 export const ipfsService = new IPFSService();
 
 // Mock IPFS service for development/testing
-class MockIPFSService {
-  async uploadFile(file: File): Promise<IPFSUploadResponse> {
-    // Simulate upload delay
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+// class MockIPFSService {
+//   async uploadFile(file: File): Promise<IPFSUploadResponse> {
+//     // Simulate upload delay
+//     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    // Generate a mock hash
-    const mockHash =
-      "Qm" +
-      Math.random().toString(36).substring(2, 15) +
-      Math.random().toString(36).substring(2, 15);
+//     // Generate a mock hash
+//     const mockHash =
+//       "Qm" +
+//       Math.random().toString(36).substring(2, 15) +
+//       Math.random().toString(36).substring(2, 15);
 
-    return {
-      ipfsHash: mockHash,
-      url: URL.createObjectURL(file), // Use blob URL for preview
-    };
-  }
+//     return {
+//       ipfsHash: mockHash,
+//       url: URL.createObjectURL(file), // Use blob URL for preview
+//     };
+//   }
 
-  getFileUrl(ipfsHash: string): string {
-    return `https://gateway.pinata.cloud/ipfs/${ipfsHash}`;
-  }
+//   getFileUrl(ipfsHash: string): string {
+//     return `https://gateway.pinata.cloud/ipfs/${ipfsHash}`;
+//   }
 
-  async testConnection(): Promise<boolean> {
-    return true;
-  }
-}
+//   async testConnection(): Promise<boolean> {
+//     return true;
+//   }
+// }
 
 // Export mock service for development
-export const mockIPFSService = new MockIPFSService();
+// export const mockIPFSService = new MockIPFSService();
 
 // Helper function to determine which service to use
 export const getIPFSService = () => {
-  const isDevelopment = import.meta.env.DEV;
-  const hasCredentials =
-    import.meta.env.VITE_PINATA_JWT || import.meta.env.VITE_PINATA_API_KEY;
-
-  if (isDevelopment && !hasCredentials) {
-    console.warn(
-      "Using mock IPFS service - configure Pinata credentials for real uploads"
-    );
-    return mockIPFSService;
-  }
-
+  // Always return the real Pinata-backed service. If credentials are missing,
+  // the service will throw a helpful error so you can detect misconfiguration
+  // early. The mock service remains available for explicit testing if needed.
   return ipfsService;
 };

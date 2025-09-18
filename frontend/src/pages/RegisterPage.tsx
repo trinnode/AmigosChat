@@ -206,14 +206,7 @@ export const RegisterPage: React.FC = () => {
               className="text-center mb-8"
             >
               <motion.h1
-                className="text-5xl md:text-6xl font-pixel text-retro-orange mb-4"
-                animate={{
-                  textShadow: [
-                    '0 0 5px #00ff41, 0 0 10px #00ff41',
-                    '0 0 15px #00ff41, 0 0 25px #00ff41',
-                    '0 0 5px #00ff41, 0 0 10px #00ff41',
-                  ],
-                }}
+                className="text-5xl md:text-6xl font-pixel text-retro-orange mb-4" 
                 transition={{ duration: 3, repeat: Infinity }}
               >
                 AMIGOS LINK

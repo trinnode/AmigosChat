@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useWriteContract, useWaitForTransactionReceipt } from "wagmi";
 import { parseEther } from "viem";
-import { Amigo_CHAT_ABI } from "../config/contracts";
+import { Amigo_CHAT_ABI, REGISTRATION_FEE } from "../config/contracts";
 import type { IPFSUploadResponse } from "../utils/ipfs";
 import { getIPFSService } from "../utils/ipfs";
 import { useUserStore } from "../stores/userStore";
@@ -98,12 +98,25 @@ export const useAmigoRegistration = () => {
         id: "blockchain-register",
       });
 
+      // Defensive: trim accidental trailing dots/spaces from contract address
+      const safeAddress = (contractAddress as string)
+        .trim()
+        .replace(/\.+$/g, "");
+
+      // Use configured registration fee so it's consistent across the app
+      const value = parseEther(REGISTRATION_FEE);
+
+      // Provide a conservative gas limit fallback. Some RPCs/wallets may fail to estimate gas;
+      // passing a gas limit avoids "missing gas limit" errors. Adjust if your contract needs more.
+      const gasLimit = 200000n;
+
       writeContract({
-        address: contractAddress,
+        address: safeAddress as `0x${string}`,
         abi: Amigo_CHAT_ABI,
         functionName: "registerAmigoUser",
         args: [data.username, profileImageHash],
-        value: parseEther("0.0001"), // Registration fee
+        value,
+        gas: gasLimit,
       });
     } catch (error) {
       const errorMessage =
