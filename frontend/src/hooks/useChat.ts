@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useCallback } from "react";
 import {
   useWatchContractEvent,
@@ -139,7 +140,7 @@ export const useChat = () => {
 
     // Start with cached messages
     const cachedMessages = CacheManager.loadMessages();
-    let allMessages: Message[] = cachedMessages || [];
+    const allMessages: Message[] = cachedMessages || [];
 
     console.log("📦 Loaded from cache:", allMessages.length, "messages");
 

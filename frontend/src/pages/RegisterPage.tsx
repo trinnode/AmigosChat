@@ -70,7 +70,7 @@ export const RegisterPage: React.FC = () => {
                 Please connect your Amigos wallet to proceed.
               </p>
               <Link to="/">
-                <PixelatedButton variant="danger" size="lg" neonGlow>
+                <PixelatedButton variant="danger" size="lg">
                   ← RETURN TO MAINFRAME
                 </PixelatedButton>
               </Link>
@@ -130,7 +130,6 @@ export const RegisterPage: React.FC = () => {
                   size="xl"
                   onClick={() => navigate('/dashboard')}
                   className="w-full"
-                  neonGlow
                 >
                   ENTER THE MATRIX →
                 </PixelatedButton>
@@ -373,7 +372,7 @@ export const RegisterPage: React.FC = () => {
                     size="xl"
                     disabled={!isFormValid}
                     className="w-full"
-                    neonGlow
+                    
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-4">
